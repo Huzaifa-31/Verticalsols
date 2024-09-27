@@ -1,0 +1,47 @@
+import { Fragment, useEffect } from "react";
+import niceSelect from "react-nice-select";
+import CallToAction from "../components/CallToAction";
+import ImageView from "../components/ImageView";
+import VideoPopup from "../components/VideoPopup";
+import { animation, stickyNav } from "../utils";
+import Footer from "./Footer";
+import Header from "./Header";
+import ScrollTop from "./ScrollTop";
+import SideBar from "./SideBar";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
+import rootReducer from "../redux/reducers/authReducer";
+export const store = createStore(rootReducer);
+
+const Layout = ({ children, header, className, footer, noHeader, names }) => {
+  useEffect(() => {
+    animation();
+    document.querySelector("body").className = className
+      ? className
+      : "oxence_body";
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", stickyNav);
+  }, []);
+  useEffect(() => {
+    return () => {
+      niceSelect({ withoutwide: true });
+    };
+  }, []);
+  return (
+    <Fragment>
+      <VideoPopup />
+      <ImageView />
+      <div className="page-wrapper">
+        {!noHeader && <Header header={header} />}
+        <SideBar />
+        {children}
+        {!footer && <CallToAction />}
+        <Footer footer={footer} />
+        <ScrollTop />
+      </div>
+    </Fragment>
+  );
+};
+export default Layout;

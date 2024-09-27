@@ -1,0 +1,97 @@
+*,
+html {
+  scroll-behavior: smooth !important;
+}
+/* .navigation li ul,
+.navigation li ul li.dropdown ul {
+  display: block !important;
+  overflow: hidden;
+  height: 0px;
+  -webkit-transition: height 0.3s linear, padding-top 0.3s linear;
+}
+.navigation li:hover ul,
+.navigation li ul li.dropdown:hover ul {
+  height: 100px;
+} */
+.navigation li.dropdown > ul {
+  /* display: block !important;
+  max-height: 0;
+  transition-delay: 4s all;
+  transition: max-height 0.35s ease-out, opacity 0.35s; */
+  /* overflow: hidden; */
+  /* opacity: 0; */
+}
+.navigation li.dropdown:hover > ul {
+  display: block;
+  /* max-height: 500px;
+  transition: max-height 0.65s ease-in, opacity 1.65s;
+  opacity: 1; */
+}
+
+.dark-version .dark-logo {
+  display: none;
+}
+.dark-version .light-logo {
+  display: block;
+}
+.light-logo {
+  display: none;
+}
+
+/* Slick slider */
+.slick-dots {
+  display: flex !important;
+}
+.feedback-active .slick-slide {
+  padding: 0 15px;
+}
+
+.page-item .page-link {
+  border-radius: 50% !important;
+}
+
+.product-details-images .nav-link {
+  padding: 0;
+}
+.customOverlay {
+  background-color: rgba(233, 224, 224, 0.7);
+}
+.largeModal {
+  border-radius: 6px;
+  margin-top: 8rem;
+  z-index: 99;
+  background-color: #293043;
+}
+.react-responsive-modal-modal {
+  background-color: #f7f9fd !important;
+}
+.heading {
+  font-size: 30px;
+}
+.serviceimg {
+  object-fit: cover;
+  width: 60px;
+  height: 60px;
+}
+.serviceimg:hover {
+  background-size: cover;
+  -webkit-transform: translateY(-15px);
+  -ms-transform: translateY(-15px);
+  transform: translateY(-15px);
+  background-color: #fc653c;
+  color: #f7f9fd;
+  background-image: url(../public/assets/images/serviceicon/mern.svg);
+}
+.serviceimg:hover {
+  color: white;
+  background-color: #f7f9fd;
+}
+.animation-img {
+  height: 100%;
+  width: 100%;
+}
+.dropdown-large{
+  height: 60rem;
+ 
+ 
+}
